@@ -1,3 +1,5 @@
+# https://asukatagui-blog.com/abc145c/
+
 from itertools import combinations
 N = int(input())
 town = []
