@@ -1,3 +1,5 @@
+# https://ttrsq.exblog.jp/24318687/
+
 INF = 10**10
 N = int(input())
 dp = [[INF]*N for _ in range(N)]
