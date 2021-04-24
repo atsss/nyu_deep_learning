@@ -19,3 +19,34 @@ for c in product([0,1],repeat=N):
     if ok:
         ans += 1
 print (ans)
+
+# My answer
+# 2021/04/22
+# from itertools import product
+#
+# N, M = map(int, input().split())
+# S = []
+#
+# for _ in range(M):
+#     s = tuple(map(int, input().split()))
+#     S.append(s[1:])
+#
+# P = tuple(map(int, input().split()))
+#
+# ans = 0
+#
+# for x in product(range(2), repeat=N):
+#     for m in range(M):
+#         sm = 0
+#         s = S[m]
+#         p = P[m]
+#
+#         for index, element in enumerate(x, 1):
+#             if element: # 0,1 で判定するならそのまま足せば良い
+#                 if index in s:
+#                     sm += 1
+#
+#         if sm % 2 != p: break
+#         if m == list(range(M))[-1]: ans += 1 # break の後に続きがあるのはバグりやすい
+#
+# print(ans)
