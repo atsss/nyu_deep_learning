@@ -15,3 +15,22 @@ for h in home:
     i = bisect.bisect(shop, h)
     ans += min(abs(shop[i-1]-h), abs(shop[i]-h))
 print (ans)
+
+# My answer
+# 2021/04/24
+# from bisect import bisect_left
+#
+# d = int(input())
+# n = int(input())
+# m = int(input())
+# S = [0] + [int(input()) for _ in range(n-1)] + [d]
+# K = [int(input()) for _ in range(m)]
+#
+# S.sort() # list の sort は nlog(n)
+# ans = 0
+#
+# for k in K:
+#     index = bisect_left(S, k)
+#     ans += min(S[index]-k, k-S[index-1])
+#
+# print(ans)
