@@ -38,3 +38,25 @@ print (ans)
 #     if c3 in cordinates and c4 in cordinates: ans = max(ans, dx**2 + dy**2)
 #
 # print(ans)
+
+# My answer
+# 2021/04/30
+# from itertools import combinations
+#
+# n = int(input())
+# cordinates = [tuple(map(int, input().split())) for _ in range(n)]
+# ans = 0
+#
+# cordinates.sort()
+# st = set(cordinates)
+#
+# for c1, c2 in combinations(cordinates, 2):
+#     dx = c2[0] - c1[0]
+#     dy = c2[1] - c1[1]
+#     c3 = (c2[0]+dy, c2[1]-dx)
+#     c4 = (c1[0]+dy, c1[1]-dx)
+#
+#     if c3 in st and c4 in st:
+#         ans = max(ans, dx**2 + dy**2)
+#
+# print(ans)

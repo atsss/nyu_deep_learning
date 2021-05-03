@@ -24,3 +24,18 @@ print (ans)
 #     ans = max(ans, count)
 #
 # print(ans)
+
+# 2021/04/30
+# S = input()
+# ACGT = 'ACGT'
+# ans = 0
+# count = 0
+#
+# for s in S:
+#     if s in ACGT:
+#         count += 1
+#         ans = max(ans, count)
+#     else:
+#         count = 0
+#
+# print(ans)

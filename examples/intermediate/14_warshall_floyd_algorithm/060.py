@@ -20,3 +20,31 @@ for n in range(N):
 for c in cost:
     c = [str(i).replace('inf','INF') for i in c]
     print(' '.join(c))
+
+# My answer
+# 2021/04/26
+# V, E = map(int, input().split())
+# adj = [tuple(map(int, input().split())) for _ in range(E)]
+#
+# INF = 10**10
+# dists = [[INF]*V for _ in range(V)]
+#
+# for v in range(V): dists[v][v] = 0
+# for s, t, d in adj: dists[s][t] = d
+#
+# for k in range(V):
+#     for i in range(V):
+#         for j in range(V):
+#             dists[i][j] = min(dists[i][k]+dists[k][j], dists[i][j])
+#
+# for i, line in enumerate(dists):
+#     if any([d < 0 for d in line]): # 閉経路の理解を間違っている
+#         print('NEGATIVE CYCLE')
+#         exit()
+#
+#     for j, element in enumerate(line):
+#         if element == INF: dists[i][j] = 'INF'
+#         else: dists[i][j] = str(dists[i][j]) # int を join 出来ないので str にする
+#
+# for line in dists:
+#     print(" ".join(line))

@@ -25,3 +25,32 @@ for d in dists:
         print ('INF')
     else:
         print (d)
+
+# My answer
+# 2021/04/26
+# 写経
+# import heapq # 順番に出すだけなら sort で良い場合がある. 出し入れするなら heapq を使ったほうが早い
+# INF = 10**10
+#
+# V, E, r = map(int, input().split())
+# adj = [[] for _ in range(V)]
+# for _ in range(E):
+#     s, t, d = map(int, input().split())
+#     adj[s].append((t,d))
+#
+# dists = [INF for _ in range(V)]
+# dists[r] = 0
+# pq = [(0, r)] # heapfiy の計算量がかからない　
+#
+# while pq:
+#     d, node = heapq.heappop(pq) # heappop の計算量はツリーの修正があるので O(logN)
+#     if d > dists[node]: continue
+#
+#     for next, cost in adj[node]:
+#         if d + cost < dists[next]:
+#             dists[next] = d + cost
+#             heapq.heappush(pq, (dists[next], next)) # heappush の計算量は O(logN). sort は毎回 O(NlogN) かかるから N 倍早い
+#
+# for d in dists:
+#     if d == INF: print('INF')
+#     else: print(d)

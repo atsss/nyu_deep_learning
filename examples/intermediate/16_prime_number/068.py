@@ -10,10 +10,19 @@ if n!=1:
 ans = [str(a) for a in ans]
 ans = str(N)+": " + " ".join(ans)
 print (ans)
-#         n /= i #  整数除算(//)を使うこと
+
+# My answer
+# 2021/04/26
+# 写経
+# N = int(input())
+# n = N
+# ans = []
+#
+# for i in range(2, int(N**0.5)+1):
+#     while n%i==0:
+#         n //= i
 #         ans.append(i)
-# if n!=1:
-#     ans.append(n)
-# ans = [type(a) for a in ans]
-# for an in ans:
-#     print (an)
+#
+# if n != 1: ans.append(n)
+#
+# print(str(N)+': '+' '.join(map(str, ans)))

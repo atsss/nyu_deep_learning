@@ -93,3 +93,63 @@ for ls in permutations(range(N)):
 #     ans.append(dots)
 #
 # for line in ans: print(''.join(line))
+
+# My answer
+# 2021/04/30
+# from itertools import permutations
+#
+# k = int(input())
+# queens = [tuple(map(int, input().split())) for i in range(k)]
+# N = 8
+# ans = []
+#
+# def check_diagonal(mp): # 斜めの判定があやふや　
+#     for i in range(N):
+#         sm = 0
+#         column = row = i
+#         sm += mp[row][column]
+#
+#         while True:
+#             row += 1
+#             column -= 1
+#             if 0 <= row <= N-1 and 0 <= column <= N-1:
+#                 print(row, column)
+#                 sm += mp[row][column]
+#
+#         column = row = i
+#         while True:
+#             row -= 1
+#             column += 1
+#             if 0 <= row <= N-1 and 0 <= column <= N-1:
+#                 sm += mp[row][column]
+#
+#         if sm > 1:
+#             return False
+#     return True
+#
+# def check_existing_queens(mp):
+#     for r, c in queens:
+#         if mp[r][c] == 0:
+#             return False
+#     return True
+#
+# for c in permutations(range(N)):
+#     mp = [[0]*N for _ in range(N)]
+#     for row, column in enumerate(c):
+#         mp[row][column] = 1
+#
+#     if not check_existing_queens(mp): continue
+#
+#     if not check_diagonal(mp): continue
+#     if not check_diagonal(mp[::-1]): continue
+#
+#     print('4')
+#     # print(mp)
+#     ans = mp
+#     break
+#
+# for line in ans:
+#     dots = ['.']*N
+#     for i in range(N):
+#         if line[i] == 1: dots[i] = 'Q'
+#     print(''.join(dots))

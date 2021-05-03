@@ -30,3 +30,18 @@ print(ans)
 #     if S[index] == t: ans += 1
 #
 # print(ans)
+
+# 2021/04/30
+# from bisect import bisect_left
+#
+# n = int(input())
+# S = list(map(int, input().split())) + [10**9+1]
+# q = int(input())
+# T = list(map(int, input().split()))
+# count = 0
+#
+# for t in T:
+#     index = bisect_left(S, t)
+#     if t == S[index]: count += 1
+#
+# print(count)

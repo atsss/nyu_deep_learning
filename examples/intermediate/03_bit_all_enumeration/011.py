@@ -50,3 +50,28 @@ print (ans)
 #         if m == list(range(M))[-1]: ans += 1 # break の後に続きがあるのはバグりやすい
 #
 # print(ans)
+
+# 2021/04/30
+# from itertools import product
+#
+# N, M = map(int, input().split())
+# S = []
+# for _ in range(M):
+#     s = list(map(int, input().split()))
+#     S.append(s[1:])
+# P = list(map(int, input().split()))
+# ans = 0
+#
+# for c in product(range(2), repeat=N):
+#     flag = True
+#
+#     for i in range(M):
+#         count = 0
+#         for s in S[i]:
+#             count += c[s-1]
+#         if P[i] != count % 2:
+#             flag = False # この後に break するべき
+#
+#     if flag: ans += 1
+#
+# print(ans)

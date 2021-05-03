@@ -19,3 +19,23 @@ for c in C:
     cur = next # 次の移動開始地点
     ans %= MOD
 print (ans)
+
+# My answer
+# 2021/04/28
+# from itertools import accumulate
+#
+# n, m = map(int, input().split())
+# S = [0] + [int(input()) for _ in range(n-1)]
+# A = [int(input()) for _ in range(m)]
+# mod = 10**5
+#
+# csum = list(accumulate(S))
+# ans = 0
+# hotel = 0
+#
+# for a in A:
+#     ans += abs(csum[hotel+a] - csum[hotel])
+#     hotel += a
+#     ans %= mod
+#
+# print(ans)

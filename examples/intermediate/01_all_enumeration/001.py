@@ -32,3 +32,19 @@ for n,x in nx:
 #
 # for a in ans:
 #     print(a)
+
+# 2021/04/30
+# from itertools import combinations
+#
+# ans = []
+#
+# while True:
+#     n, x = map(int, input().split())
+#     if n == 0 and x == 0: break
+#
+#     count = 0
+#     for c in combinations(range(1, n+1), 3):
+#         if sum(c) == x: count += 1
+#     ans.append(count)
+#
+# for a in ans: print(a)

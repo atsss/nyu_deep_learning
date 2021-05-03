@@ -43,3 +43,27 @@ print (mn)
 #     ans = min(ans, total)
 #
 # print(ans)
+
+# 2021/04/30
+# from itertools import product
+#
+# N, K = map(int, input().split())
+# A = list(map(int, input().split()))
+# ans = float('inf')
+#
+# for c in product(range(2), repeat=N-1): # A[0] は確定
+#     if sum(c) != K-1: continue
+#
+#     price = 0
+#     mn = A[0]
+#     for i in range(N-1):
+#         if c[i] == 1:
+#             price += max(0, mn + 1 - A[i+1])
+#             mn = max(mn+1, A[i+1])
+#         else:
+#             if A[i+1] > mn: break
+#             mn = max(mn, A[i+1])
+#     else:
+#         ans = min(ans, price)
+#
+# print(ans)

@@ -50,3 +50,37 @@ print(cost(left))
 #     else: right = x2
 #
 # print(f(left))
+
+# 2021/04/30
+# # import matplotlib.pyplot as plt
+# # import numpy as np
+# #
+# # P = 10 ** 3
+# # N = 100
+# # xmin = 0
+# # xmax = 200
+# #
+# # def f(x):
+# #     return x + P*pow(2, -x/1.5)
+# #
+# # p = np.linspace(xmin, xmax, N)
+# # q = f(p)
+# # plt.plot(p,q)
+# # plt.show()
+#
+# P = float(input())
+# loop = 10**5
+# left_edge = 0
+# right_edge = 10**5
+#
+# def f(x):
+#     return x + P*pow(2, -x/1.5)
+#
+# for _ in range(loop):
+#     left = left_edge + (right_edge-left_edge)/3
+#     right = left_edge + 2*(right_edge-left_edge)/3
+#
+#     if f(left) > f(right): left_edge = left # f(right)<f(left) にしないとタイムアウトになる
+#     else: right_edge = right
+#
+# print(f(left_edge))

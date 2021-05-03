@@ -1,3 +1,5 @@
+# https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_10_C&lang=jp
+
 Q = int(input())
 
 def lcs(X, Y):
@@ -17,3 +19,7 @@ for q in range(Q):
     ans.append(lcs(X,Y))
 for a in ans:
     print(a)
+
+# My answer
+# 2021/04/25
+# これがわかりやすい -> https://naoya-2.hatenadiary.org/entry/20090328/1238251033

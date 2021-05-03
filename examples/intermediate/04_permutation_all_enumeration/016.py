@@ -29,3 +29,18 @@ print (abs(a-b))
 #     if c == Q: b = index
 #
 # print(abs(a-b))
+
+# 2021/04/30
+# from itertools import permutations
+#
+# N = int(input())
+# P = tuple(map(int, input().split()))
+# Q = tuple(map(int, input().split()))
+# a = 0
+# b = 0
+#
+# for i, c in enumerate(permutations(range(1, N+1))):
+#     if c == P: a = i
+#     if c == Q: b = i
+#
+# print(abs(a-b))

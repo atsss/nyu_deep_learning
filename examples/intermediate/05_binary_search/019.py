@@ -34,3 +34,22 @@ print (ans)
 #     ans += min(S[index]-k, k-S[index-1])
 #
 # print(ans)
+
+# 2021/04/30
+# from bisect import bisect_left
+#
+# d = int(input())
+# n = int(input())
+# m = int(input())
+# shops = [int(input()) for _ in range(n-1)] # [0] 足すの忘れてる 
+# destinations = [int(input()) for _ in range(m)]
+#
+# ans = 0
+# shops.sort()
+# shops.append(d)
+#
+# for des in destinations:
+#     index = bisect_left(shops, des)
+#     ans += min(abs(shops[index]-des), abs(des-shops[index-1]))
+#
+# print(ans)

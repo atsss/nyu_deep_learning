@@ -23,3 +23,34 @@ while(pq):
         if visited[s]==0: # 未訪問なら探索候補としてpqに追加
             heapq.heappush(pq, (w, s))
 print (ans)
+
+# My answer
+# 2021/04/26
+# 写経
+# ダイクストラ法に考え方が似ている. 全体最小を求める場合は最小全域木を使う
+# import heapq
+# V, E = map(int, input().split())
+# adj = [[] for _ in range(V)]
+# for _ in range(E):
+#     s, t, w = map(int, input().split())
+#     adj[s].append((t,w))
+#     adj[t].append((s,w)) # 無向グラフなので双方向になるように設定する
+#
+# visited = [0]*V
+# pq = []
+# for t, w in adj[0]:
+#     heapq.heappush(pq, (w,t))
+# visited[0] = 1
+#
+# ans = 0
+# while pq:
+#     w, t = heapq.heappop(pq)
+#
+#     if visited[t]: continue
+#
+#     visited[t] = 1
+#     ans += w
+#     for nt, nw in adj[t]:
+#         if not visited[nt]: heapq.heappush(pq, (nw,nt))
+#
+# print(ans)
