@@ -8,3 +8,9 @@ print (pow(m,n,MOD))
 # m, n = map(int, input().split())
 # mod = 10**9 + 7
 # print(pow(m, n, mod))
+
+# 2021/05/02
+# m, n = map(int, input().split())
+# mod = 10**9 + 7
+#
+# print(pow(m, n, mod))

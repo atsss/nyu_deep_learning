@@ -26,3 +26,17 @@ print (ans)
 # if n != 1: ans.append(n)
 #
 # print(str(N)+': '+' '.join(map(str, ans)))
+
+# 2021/05/02
+# n = int(input())
+# N = n
+#
+# ans = []
+# for i in range(2, int(N**0.5)+1):
+#     while n % i == 0:
+#         n //= i
+#         ans.append(i)
+#
+# if n != 1: ans.append(n)
+#
+# print(str(N) + ': ' + ' '.join(map(str, ans)))

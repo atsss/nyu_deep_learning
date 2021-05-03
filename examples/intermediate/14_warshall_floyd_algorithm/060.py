@@ -48,3 +48,27 @@ for c in cost:
 #
 # for line in dists:
 #     print(" ".join(line))
+
+# 2021/05/02
+# V, E = map(int, input().split())
+#
+# INF = float('INF')
+# dists = [[INF] * V for _ in range(V)]
+#
+# for i in range(V): dists[i][i] = 0
+# for _ in range(E):
+#     s, t, d = map(int, input().split())
+#     dists[s][t] = d
+#
+# for i in range(V):
+#     for j in range(V):
+#         for k in range(V):
+#             dists[i][j] = min(dists[i][j], dists[i][k]+dists[k][j])
+#
+# for i in range(V):
+#     if dists[i][i] < 0:
+#         print('NEGATIVE CYCLE')
+#         exit()
+#
+# for line in dists:
+#     print(' '.join(map(str, line)).replace('inf','INF'))

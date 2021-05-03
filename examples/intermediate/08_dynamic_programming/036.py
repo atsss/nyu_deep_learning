@@ -32,3 +32,19 @@ print (dp[N][W])
 #             dp[i+1][j] = dp[i][j]
 #
 # print(dp[N][W])
+
+# 2021/05/02
+# N, W = map(int, input().split())
+# items = [tuple(map(int, input().split())) for _ in range(N)]
+#
+# dp = [[0]*(W+1) for _ in range(N+1)]
+#
+# for n in range(N):
+#     nv, nw = items[n]
+#     for w in range(W+1):
+#         if w - nw >= 0:
+#             dp[n+1][w] = max(dp[n][w], dp[n+1][w-nw]+nv)
+#         else:
+#             dp[n+1][w] = dp[n][w]
+#
+# print(dp[N][W])

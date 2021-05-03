@@ -18,3 +18,14 @@ print (dp[n])
 # for i in range(2, mx): fib[i] = fib[i-1] + fib[i-2]
 #
 # print(fib[n])
+
+# 2021/05/02
+# n = int(input())
+#
+# dp = [0] * 45
+# dp[0] = 1
+# dp[1] = 1
+#
+# for i in range(2, 45): dp[i] = dp[i-1] + dp[i-2]
+#
+# print(dp[n])

@@ -15,7 +15,7 @@ visited[0] = 1 # 始点の訪問フラグを立てる
 ans = 0
 while(pq):
     w, t = heapq.heappop(pq)
-    if visited[t]: # 訪問済みならスキップ
+    if visited[t]: # 訪問済みならスキップ -> ダイクストラと違う
         continue
     visited[t] = 1 # 訪問フラグを立てる
     ans += w # スコアに加算

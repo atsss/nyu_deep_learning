@@ -23,3 +23,26 @@ for a in ans:
 # My answer
 # 2021/04/25
 # これがわかりやすい -> https://naoya-2.hatenadiary.org/entry/20090328/1238251033
+
+# 2021/05/02
+# q = int(input())
+# S = []
+# for _ in range(q):
+#     X = input()
+#     Y = input()
+#     S.append((X, Y))
+# ans = []
+#
+# for X, Y in S:
+#     dp = [[0]*(len(Y)+1) for _ in range(len(X)+1)]
+#
+#     for xi in range(1, len(X)+1): # ナップザック問題と違って、一つ前から現在の値を求める
+#         for yi in range(1, len(Y)+1):
+#             if X[xi-1] == Y[yi-1]:
+#                 dp[xi][yi] = dp[xi-1][yi-1] + 1
+#             else:
+#                 dp[xi][yi] = max(dp[xi-1][yi], dp[xi][yi-1])
+#
+#     ans.append(dp[len(X)][len(Y)])
+#
+# for a in ans: print(a)

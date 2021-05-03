@@ -54,3 +54,33 @@ for d in dists:
 # for d in dists:
 #     if d == INF: print('INF')
 #     else: print(d)
+
+# 2021/05/02
+# import heapq
+#
+# V, E, r = map(int, input().split())
+# adj = [[] for _ in range(V)]
+# for _ in range(E):
+#     s, t, d = map(int, input().split())
+#     adj[s].append((d, t))
+#
+# hq = []
+# INF = float('inf')
+# visited = [INF]*V
+# visited[r] = 0
+# for d, t in adj[r]:
+#     heapq.heappush(hq, (d, t))
+#
+# while hq:
+#     d, t = heapq.heappop(hq)
+#
+#     if visited[t] != INF: continue # 訪問済みではなくて、d > visited[t] ならスキップ
+#
+#     visited[t] = d
+#     for nd, nt in adj[t]:
+#         # ここで次の頂点の重み付け先に行っておく
+#         heapq.heappush(hq, (nd+d, nt))
+#
+# for ans in visited:
+#     if ans == INF: print('INF')
+#     else: print(ans)
