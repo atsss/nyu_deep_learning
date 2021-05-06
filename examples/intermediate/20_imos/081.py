@@ -22,3 +22,18 @@ print (max(csum))
 #
 # ans = max(list(accumulate(sm)))
 # print(ans)
+
+# 2021/05/04
+# from itertools import accumulate
+#
+# n = int(input())
+# A = [tuple(map(int, input().split())) for _ in range(n)]
+#
+# imos = [0] * (10**6+2)
+#
+# for a, b in A:
+#     imos[a] += 1
+#     imos[b+1] -= 1
+#
+# ac = list(accumulate(imos))
+# print(max(ac))

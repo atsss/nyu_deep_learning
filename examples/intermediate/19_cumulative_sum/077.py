@@ -39,3 +39,21 @@ print (ans)
 #     ans %= mod
 #
 # print(ans)
+
+# 2021/05/04
+# from itertools import accumulate
+#
+# MOD = 10**5
+# n, m = map(int, input().split())
+# S = [int(input()) for _ in range(n-1)]
+# A = [int(input()) for _ in range(m)]
+#
+# ac = list(accumulate([0]+S))
+# ans = 0
+# prev = 0
+#
+# for a in A:
+#     ans += abs(ac[prev+a]-ac[prev])
+#     prev += a
+#
+# print(ans%MOD)

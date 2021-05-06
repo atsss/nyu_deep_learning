@@ -52,3 +52,28 @@ for a in ans:
 #
 # for a in ans:
 #     print(a)
+
+# 2021/05/04
+# from itertools import accumulate
+#
+# def time_to_sec(time):
+#     hours, mins, secs = map(int, time.split(':'))
+#     return hours * 60 * 60 + mins * 60 + secs
+#
+# ans = []
+#
+# while True:
+#     n = int(input())
+#     if not n: break
+#
+#     times = [list(input().split()) for _ in range(n)]
+#
+#     imos = [0] * 60 * 60 * 24
+#
+#     for start_at, end_at in times:
+#         imos[time_to_sec(start_at)] += 1
+#         imos[time_to_sec(end_at)] -= 1
+#
+#     ans.append(max(list(accumulate(imos))))
+#
+# for a in ans: print(a)
