@@ -94,7 +94,6 @@ for ls in permutations(range(N)):
 #
 # for line in ans: print(''.join(line))
 
-# My answer
 # 2021/04/30
 # from itertools import permutations
 #
@@ -153,3 +152,44 @@ for ls in permutations(range(N)):
 #     for i in range(N):
 #         if line[i] == 1: dots[i] = 'Q'
 #     print(''.join(dots))
+
+# 2021/05/06
+# from itertools import permutations
+#
+# N = 8
+# k = int(input())
+# queens = [tuple(map(int, input().split())) for _ in range(k)]
+# ans = []
+#
+# def check_existing_queens(combination):
+#     for r, c in queens:
+#         if combination[r] != c:
+#             return False
+#     return True
+#
+# def check_diagonal(board):
+#     for i in range(2*N-1):
+#         sm = 0
+#         for j in range(N):
+#             if 0 <= i-j <= 7:
+#                 sm += board[i-j][j]
+#         if sm > 1:
+#             return False
+#     return True
+#
+# for c in permutations(range(N)):
+#     if not check_existing_queens(c): continue
+#
+#     board = []
+#     for i in range(N):
+#         line = [0] * N
+#         line[c[i]] = 1
+#         board.append(line)
+#
+#     if not check_diagonal(board): continue
+#     if not check_diagonal(board[::-1]): continue
+#
+#     ans = board
+#
+# for line in ans:
+#     print(''.join(map(str, line)).replace('0', '.').replace('1', 'Q'))

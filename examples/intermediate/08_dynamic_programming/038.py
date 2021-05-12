@@ -46,3 +46,26 @@ for a in ans:
 #     ans.append(dp[len(X)][len(Y)])
 #
 # for a in ans: print(a)
+
+# 2021/05/02
+# q = int(input())
+# A = []
+# B = []
+# for _ in range(q):
+#     a = input()
+#     b = input()
+#     A.append(a)
+#     B.append(b)
+#
+# for i in range(q):
+#     a = A[i]
+#     b = B[i]
+#     dp = [[0] * (len(b)+1) for _ in range(len(a)+1)]
+#
+#     for ia in range(1, len(a)+1): # スタートが1から始まる
+#         for ib in range(1, len(b)+1):
+#             if a[ia-1] == b[ib-1]:
+#                 dp[ia][ib] = dp[ia-1][ib-1] + 1
+#             else:
+#                 dp[ia][ib] = max(dp[ia-1][ib], dp[ia][ib-1])
+#     print(dp[-1][-1])

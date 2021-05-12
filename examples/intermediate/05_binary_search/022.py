@@ -84,3 +84,37 @@ print(cost(left))
 #     else: right_edge = right
 #
 # print(f(left_edge))
+
+# 2021/05/06
+# # import matplotlib.pyplot as plt
+# # import numpy as np
+# #
+# # def f(x):
+# #     return x + P * pow(2, -x/1.5)
+# #
+# # P = 100
+# # mx = 200
+# # mn = 0
+# # N = 100
+# #
+# # p = np.linspace(mn, mx, N)
+# # q = f(p)
+# # plt.plot(p,q)
+# # plt.show()
+#
+# P = float(input())
+#
+# def f(x): return x + P * pow(2, -x/1.5)
+#
+# left = 0
+# right = 10**5
+#
+# for _ in range(10**5):
+#     m1 = left + (right-left)/3
+#     m2 = left + 2*(right-left)/3
+#     if f(m1) < f(m2):
+#         right = m2
+#     else:
+#         left = m1
+#
+# print(f(left))

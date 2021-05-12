@@ -19,3 +19,23 @@ for l in range(1,N): # iとjの差分
             # cost(左側行列積) + cost(右側行列積) + 行列計算のコスト
             dp[i][j] = min(dp[i][j], dp[i][k]+dp[k+1][j]+R[i]*R[k+1]*R[j+1]) # 初回はR[0]*R[1]*R[2]
 print (dp[0][-1])
+
+# My answer
+# 2021/05/12
+# n = int(input())
+# R = []
+# for _ in range(n):
+#     r, c = map(int, input().split())
+#     R.append(r)
+# R.append(c)
+#
+# dp = [[float('inf')] * n for _ in range(n)]
+# for i in range(n): dp[i][i] = 0
+#
+# for d in range(1, n):
+#     for i in range(n-d):
+#         j = i+d
+#         for k in range(i, j):
+#             dp[i][j] = min(dp[i][j], dp[i][k] + dp[k+1][j] + R[i] * R[k+1] * R[j+1])
+#
+# print(dp[0][-1])

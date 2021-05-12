@@ -28,3 +28,20 @@ print (dp[M][N])
 #             dp[m+1][n] = dp[m][n]
 #
 # print(dp[M][N])
+
+# 2021/05/06
+# N, M = map(int, input().split())
+# C = list(map(int, input().split()))
+#
+# INF = float('inf')
+# dp = [[INF] * (N+1) for _ in range(M+1)]
+# dp[0][0] = 0
+#
+# for m in range(M):
+#     for n in range(N+1):
+#         if n - C[m] >= 0:
+#             dp[m+1][n] = min(dp[m][n], dp[m][n-C[m]] + 1)
+#         else:
+#             dp[m+1][n] = dp[m][n]
+#
+# print(dp[-1][-1])

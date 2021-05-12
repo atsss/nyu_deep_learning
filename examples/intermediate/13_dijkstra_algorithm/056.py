@@ -84,3 +84,30 @@ for d in dists:
 # for ans in visited:
 #     if ans == INF: print('INF')
 #     else: print(ans)
+
+# 2021/05/06
+# import heapq
+#
+# V, E, r = map(int, input().split())
+# adj = [[] for _ in range(V)]
+# for _ in range(E):
+#     s, t, d = map(int, input().split())
+#     adj[s].append((t, d))
+#
+# dists = [-1] * V
+# pq = []
+# heapq.heappush(pq, (0, r))
+#
+# while pq:
+#     d, v = heapq.heappop(pq)
+#     if dists[v] != -1: continue # 判定ミス
+#
+#     dists[v] = d
+#
+#     for nv, nd in adj[v]:
+#         if dists[nv] != -1: continue
+#         heapq.heappush(pq, (d+nd, nv))
+#
+# for ans in dists:
+#     if ans == -1: print('INF')
+#     else: print(ans)

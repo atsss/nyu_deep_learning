@@ -15,7 +15,7 @@ visited[0] = 1 # 始点の訪問フラグを立てる
 ans = 0
 while(pq):
     w, t = heapq.heappop(pq)
-    if visited[t]: # 訪問済みならスキップ -> ダイクストラと違う
+    if visited[t]: # 訪問済みならスキップ -> ダイクストラと違う(ダイクストラは都度最短距離を確認する)
         continue
     visited[t] = 1 # 訪問フラグを立てる
     ans += w # スコアに加算
