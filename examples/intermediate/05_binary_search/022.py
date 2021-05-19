@@ -118,3 +118,21 @@ print(cost(left))
 #         left = m1
 #
 # print(f(left))
+
+# 2021/05/15
+# P = float(input())
+# loop = 10**5
+# left = 0
+# right = 10**5
+#
+# def f(x):
+#     return x + P * pow(2, -x/1.5)
+#
+# for _ in range(loop):
+#     m1 = left + (right-left)/3
+#     m2 = left + (right-left)*2/3
+#
+#     if f(m1) > f(m2): left = m1
+#     else: right = m2
+#
+# print(f(left))

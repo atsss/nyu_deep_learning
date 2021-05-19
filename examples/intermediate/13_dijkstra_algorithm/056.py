@@ -111,3 +111,36 @@ for d in dists:
 # for ans in dists:
 #     if ans == -1: print('INF')
 #     else: print(ans)
+
+# 2021/05/06
+# import heapq
+#
+# V, E, r = map(int, input().split())
+# # adj = [[]] * V # 参照コピーになるので注意.配列の初期化は注意が必要
+# adj = [[] for _ in range(V)]
+# for _ in range(E):
+#     s, t, d = map(int, input().split())
+#     adj[s].append((t, d))
+#
+# INF = float('inf')
+# hq = []
+# dists = [INF] * V
+#
+# dists[r] = 0
+# for t, d in adj[r]:
+#     heapq.heappush(hq, (d, t))
+#
+# while hq:
+#     d, node = heapq.heappop(hq)
+#     if dists[node] < d: continue
+#
+#     dists[node] = d
+#     for nxt, nd in adj[node]:
+#         cost = d + nd
+#         if dists[nxt] < cost: continue
+#
+#         heapq.heappush(hq, (cost, nxt))
+#
+# for d in dists:
+#     if d == INF: print('INF')
+#     else: print(d)

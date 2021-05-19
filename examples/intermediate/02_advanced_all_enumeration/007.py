@@ -44,13 +44,13 @@ print (ans)
 # from itertools import combinations
 #
 # n = int(input())
-# cordinates = [tuple(map(int, input().split())) for _ in range(n)]
+# coordinates = [tuple(map(int, input().split())) for _ in range(n)]
 # ans = 0
 #
-# cordinates.sort()
-# st = set(cordinates)
+# coordinates.sort()
+# st = set(coordinates)
 #
-# for c1, c2 in combinations(cordinates, 2):
+# for c1, c2 in combinations(coordinates, 2):
 #     dx = c2[0] - c1[0]
 #     dy = c2[1] - c1[1]
 #     c3 = (c2[0]+dy, c2[1]-dx)
