@@ -60,3 +60,27 @@ print (ans)
 #         ans = max(ans, dx**2 + dy**2)
 #
 # print(ans)
+
+# 2021/05/21
+# from itertools import combinations
+#
+# N = int(input())
+# coordinates = [tuple(map(int, input().split())) for _ in range(N)]
+#
+# coordinates.sort()
+# st = set(coordinates)
+# ans = 0
+#
+# for c1, c2 in combinations(coordinates, 2):
+#     x1, y1 = c1
+#     x2, y2 = c2
+#     dx = x2 - x1
+#     dy = y2 - y1
+#
+#     c3 = (x2 + dy, y2 - dx)
+#     c4 = (x1 + dy, y1 - dx)
+#
+#     if c3 in st and c4 in st:
+#         ans = max(ans, dx**2 + dy**2)
+#
+# print(ans)

@@ -26,3 +26,15 @@ print(ans)
 #     ans = min(ans, price)
 #
 # print(ans)
+
+# 2021/05/21
+# A, B, C, X, Y = map(int, input().split())
+#
+# c_max = max(X, Y)
+# ans = float('inf')
+#
+# for i in range(c_max + 1):
+#     price = A*max(0, X-i) + B*max(0, Y-i) + C*2*i
+#     ans = min(ans, price)
+#
+# print(ans)

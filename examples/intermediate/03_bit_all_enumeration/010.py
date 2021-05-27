@@ -61,3 +61,24 @@ for m in M:
 # for m in M:
 #     if m in sm: print('yes') # 若干遅い可能性がある. sm を set しておくと探索コストは O(1)
 #     else: print('no')
+
+# 2021/05/21
+# from itertools import product
+#
+# N = int(input())
+# A = list(map(int, input().split()))
+# Q = int(input())
+# M = list(map(int, input().split()))
+#
+# sm = []
+# for p in product(range(2), repeat=N):
+#     count = 0
+#     for i in range(N):
+#         if p[i]:
+#             count += A[i]
+#     sm.append(count)
+#
+# st = set(sm)
+# for m in M:
+#     if m in st: print('yes')
+#     else: print('no')
