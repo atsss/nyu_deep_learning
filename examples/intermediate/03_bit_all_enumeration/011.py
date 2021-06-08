@@ -21,8 +21,7 @@ for c in product([0,1],repeat=N):
 print (ans)
 
 # My answer
-# 2021/04/22
-# from itertools import product
+# 2021/04/22 # from itertools import product
 #
 # N, M = map(int, input().split())
 # S = []
@@ -71,6 +70,32 @@ print (ans)
 #             count += c[s-1]
 #         if P[i] != count % 2:
 #             flag = False # この後に break するべき
+#
+#     if flag: ans += 1
+#
+# print(ans)
+
+# 2021/06/08
+# from itertools import product
+#
+# N, M = map(int, input().split())
+# S = []
+# for _ in range(M):
+#     s = list(map(int, input().split()))
+#     S.append(s[1:])
+# P = list(map(int, input().split()))
+#
+# ans = 0
+# for c in product([0, 1], repeat=N):
+#     flag = True
+#
+#     for i in range(M):
+#         count = 0
+#         for s in S[i]:
+#             count += c[s-1]
+#         if count % 2 != P[i]:
+#             flag = False
+#             break
 #
 #     if flag: ans += 1
 #
