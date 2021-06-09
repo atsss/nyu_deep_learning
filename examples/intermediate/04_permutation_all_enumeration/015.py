@@ -42,3 +42,16 @@ print (2*ans/N)
 #
 # ans = 2*sm/N
 # print(ans)
+
+# 2021/06/09
+# from itertools import combinations
+#
+# N = int(input())
+# cities = [tuple(map(int, input().split())) for _ in range(N)]
+# sm = 0
+#
+# for c1, c2 in combinations(cities, 2):
+#     sm += pow((c1[0]-c2[0])**2 + (c1[1]-c2[1])**2, 0.5)
+#
+# ans = 2*sm/N
+# print(ans)
