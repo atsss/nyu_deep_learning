@@ -107,3 +107,34 @@ for n in range(N):
 # for i in range(n):
 #     ans = [i+1, d[i], f[i]]
 #     print(' '.join(map(str, ans)))
+
+# 2021/06/10
+# N = int(input())
+# adj = []
+# for _ in range(N):
+#     array = list(map(int, input().split()))
+#     adj.append(array[2:])
+#
+# d = [0]*N
+# f = [0]*N
+# t = 0
+#
+# def dfs(vertex, time):
+#     time += 1
+#     d[vertex] = time
+#
+#     for nxt in adj[vertex]:
+#         if d[nxt-1] == 0:
+#             time = dfs(nxt-1, time)
+#
+#     time += 1
+#     f[vertex] = time
+#
+#     return time
+#
+# for i in range(N):
+#     if d[i] == 0:
+#         t = dfs(i, t)
+#
+# for i in range(N):
+#     print(' '.join(map(str, [i+1, d[i], f[i]])))

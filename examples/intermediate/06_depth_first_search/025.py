@@ -99,3 +99,41 @@ for a in ans:
 #     ans.append(count)
 #
 # for a in ans: print(a)
+
+# 2021/06/10
+# ans = []
+# dxdy = ((0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1), (-1, 0), (-1, 1))
+#
+# while True:
+#     W, H = map(int, input().split())
+#     if W == 0 and H == 0: break
+#
+#     mp = []
+#     for _ in range(H):
+#         line = list(map(int, input().split()))
+#         mp.append(line)
+#
+#     visited = [[-1] * W for _ in range(H)]
+#     count = 0
+#
+#     def dfs(h, w, num):
+#         visited[h][w] = num
+#
+#         for dx, dy in dxdy:
+#             nx = w + dx
+#             ny = h + dy
+#
+#             if 0 <= nx < W and 0 <= ny < H:
+#                 if mp[ny][nx] == 1 and visited[ny][nx] == -1:
+#                     dfs(ny, nx, num)
+#
+#     for h in range(H):
+#         for w in range(W):
+#             if mp[h][w] == 0: continue
+#             if visited[h][w] == -1:
+#                 count += 1
+#                 dfs(h, w, count)
+#
+#     ans.append(count)
+#
+# for a in ans: print(a)

@@ -72,3 +72,21 @@ print (ans)
 #     ans += min(stores[index]-h, h-stores[index-1])
 #
 # print(ans)
+
+# 2021/06/10
+# from bisect import bisect_left
+#
+# d = int(input())
+# n = int(input())
+# m = int(input())
+# shops = [0] + [int(input()) for _ in range(n-1)] + [d]
+# homes = [int(input()) for _ in range(m)]
+# ans = 0
+#
+# shops.sort()
+#
+# for h in homes:
+#     index = bisect_left(shops, h)
+#     ans += min(h-shops[index-1], shops[index]-h)
+#
+# print(ans)
