@@ -90,3 +90,31 @@ print (ans)
 #                 q.put((d+1, nx, ny))
 #
 # print(distance[gy-1][gx-1])
+
+# 2021/06/11
+# import queue
+#
+# R, C = map(int, input().split())
+# sy, sx = map(int, input().split())
+# gy, gx = map(int, input().split())
+# mp = [input() for _ in range(R)]
+#
+# dxdy = ((0, 1), (1, 0), (0, -1), (-1, 0))
+# dists = [[-1] * C for _ in range(R)]
+#
+# q = queue.Queue()
+# q.put((sx-1, sy-1, 0))
+#
+# while not q.empty():
+#     x, y, d = q.get()
+#     if dists[y][x] == -1: dists[y][x] = d
+#     else: continue
+#
+#     for dx, dy in dxdy:
+#         nx = x + dx
+#         ny = y + dy
+#         if 0 <= nx < C and 0 <= ny < R and mp[ny][nx] == '.':
+#             if dists[ny][nx] == -1: q.put((nx, ny, d+1))
+#             else: continue
+#
+# print(dists[gy-1][gx-1])

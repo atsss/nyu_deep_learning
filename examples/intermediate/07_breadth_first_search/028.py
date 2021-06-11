@@ -73,3 +73,28 @@ for i in range(1,N+1):
 #
 # for i in range(n):
 #     print(str(i+1)+' '+str(distance[i]))
+
+# 2021/06/11
+# import queue
+#
+# N = int(input())
+# adj = []
+# for _ in range(N):
+#     a = list(map(int, input().split()))
+#     adj.append(a[2:])
+#
+# dists = [-1]*N
+# q = queue.Queue()
+# q.put((0, 0))
+#
+# while not q.empty():
+#     v, d = q.get()
+#     if dists[v] != -1: continue
+#
+#     dists[v] = d
+#     for nxt in adj[v]:
+#         if dists[nxt-1] != -1: continue
+#         q.put((nxt-1, d+1))
+#
+# for i in range(N):
+#     print(' '.join(map(str, [i+1, dists[i]])))
